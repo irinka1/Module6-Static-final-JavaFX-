@@ -6,10 +6,16 @@
 Цвета кругов должны быть рандомизированы.
 На голове снеговика(верхний круг) из кругов должен быть отрисован нос и 2 глаза (меньше головы).
 Круги на теле должны быть рандомизированы. Нет последовательности на уменьшение или увеличение.
+Данные вводятся через консоль:
+кол-во кругов
+мин. радиус круга
+макс. радиус круга
+
 */
 
 
 import javafx.application.Application;
+
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -18,57 +24,74 @@ import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 import java.util.Random;
+import java.util.Scanner;
 
 import static javafx.application.Application.launch;
 
-public class модуль6дз {
+public class модуль6дз extends Application {
 
 
-    public class Program extends Application {
-        @Override
-        public void start(Stage primaryStage) throws Exception {
-            primaryStage.setWidth(400);
-            primaryStage.setHeight(400);
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        primaryStage.setWidth(400);
+        primaryStage.setHeight(400);
 
-            Pane root = new Pane();
+        Pane root = new Pane();
 
-           root.getChildren().addAll(generateCircles(5));
+        System.out.printf("Введите количество кругов \n");
+        Scanner sc = new Scanner(System.in);
+        int countCircle = sc.nextInt();
+
+        root.getChildren().addAll(generateCircles(countCircle));
+
+       /* System.out.printf("Введите мин. радиус круга \n");
+        Scanner sc1 = new Scanner(System.in);
+        int minRadius = sc1.nextInt();
 
 
+        System.out.printf("Введите макс. радиус круга \n");
+        Scanner sc2 = new Scanner(System.in);
+        int maxRadius = sc2.nextInt();*/
 
-           Scene scene = new Scene(root);
-           primaryStage.setScene(scene);
 
-            primaryStage.show();
-        }}
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
 
-        public static void main(String[] args) {
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
 
         launch(args);
-        }
+    }
 
-        //
+    //
 
-       private Circle[] generateCircles(int count) {
-            Random random = new Random();
+    private Circle[] generateCircles(int count) {
+        Random random = new Random();
 
-            Circle[] circles = new Circle[count];
-            for(int i = 0; i < circles.length; i++) {
-                Color color = Color.color(random.nextDouble(),
-                        random.nextDouble(),
-                        random.nextDouble(),
-                        0.6f);
+        Circle[] circles = new Circle[count];
+        for (int i = 0; i < circles.length; i++) {
+            Color color = Color.color(random.nextDouble(),
+                    random.nextDouble(),
+                    random.nextDouble());
 
-                circles[i] = new Circle(
-                        random.nextInt(400),
-                        random.nextInt(400),
-                        random.nextInt(80),
+                /*int y;
+                int radius;
+                for(i=0; i<circles.length; i++)
+                    radius[i] = new*/
+
+
+            for (int j = 0; j < circles.length; j++) {
+                circles[j] = new Circle(
+                        200,
+                        10 * j,
+                        Math.random()* j,
                         Paint.valueOf(color.toString()));
-                // 0 1 2 3 4 5 6 7 8 9 a b c d e f
-            }
+
+            }}
             return circles;
         }
 
 
     }
-
