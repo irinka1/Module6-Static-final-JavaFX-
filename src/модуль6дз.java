@@ -78,7 +78,7 @@ public class модуль6дз extends Application {
                     random.nextDouble());
 
 
-            double radius = Math.random()*maxRadius;
+            double radius = minRadius+Math.random()*maxRadius;
             double y = radius + y1;
             y1 = y + radius;
 
