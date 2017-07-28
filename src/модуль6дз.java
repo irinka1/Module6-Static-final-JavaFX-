@@ -44,16 +44,6 @@ public class модуль6дз extends Application {
 
         root.getChildren().addAll(generateCircles(countCircle));
 
-       /* System.out.printf("Введите мин. радиус круга \n");
-        Scanner sc1 = new Scanner(System.in);
-        int minRadius = sc1.nextInt();
-
-
-        System.out.printf("Введите макс. радиус круга \n");
-        Scanner sc2 = new Scanner(System.in);
-        int maxRadius = sc2.nextInt();*/
-
-
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
 
@@ -65,33 +55,57 @@ public class модуль6дз extends Application {
         launch(args);
     }
 
-    //
 
     private Circle[] generateCircles(int count) {
         Random random = new Random();
 
+        System.out.printf("Введите макс. радиус круга \n");
+        Scanner sc2 = new Scanner(System.in);
+        int maxRadius = sc2.nextInt();
+
+
+        System.out.printf("Введите мин. радиус круга \n");
+            Scanner sc1 = new Scanner(System.in);
+            int minRadius = sc1.nextInt();
+
         Circle[] circles = new Circle[count];
+
+        double y1 = 20;
+
         for (int i = 0; i < circles.length; i++) {
             Color color = Color.color(random.nextDouble(),
                     random.nextDouble(),
                     random.nextDouble());
 
-                /*int y;
-                int radius;
-                for(i=0; i<circles.length; i++)
-                    radius[i] = new*/
+
+            double radius = Math.random()*maxRadius;
+            double y = radius + y1;
+            y1 = y + radius;
 
 
-            for (int j = 0; j < circles.length; j++) {
-                circles[j] = new Circle(
-                        200,
-                        10 * j,
-                        Math.random()* j,
-                        Paint.valueOf(color.toString()));
 
-            }}
-            return circles;
+            circles[i] = new Circle(
+                    200, y, radius, Paint.valueOf(color.toString()));
+
+            if(i==circles.length-1){
+                circles[i] = new Circle(200-(circles[0].getRadius())/2,
+                        circles[0].getCenterY()-(circles[0].getRadius())/2,
+                        (circles[0].getRadius()*Math.random())/4, Paint.valueOf(color.toString()));
+            }
+
+            if(i==circles.length-2){
+                circles[i] = new Circle(200+(circles[0].getRadius()*Math.random())/2,
+                        circles[0].getCenterY()-(circles[0].getRadius())/2,
+                        (circles[0].getRadius()*Math.random())/4, Paint.valueOf(color.toString()));
+            }
+
+            if(i==circles.length-3){
+                circles[i] = new Circle(200,
+                        circles[0].getCenterY()+circles[0].getRadius()*Math.random(),
+                        (circles[0].getRadius()*Math.random())/4, Paint.valueOf(color.toString()));
+            }
+
         }
-
-
+        return circles;
     }
+}
