@@ -13,9 +13,7 @@
 
 */
 
-
 import javafx.application.Application;
-
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -44,11 +42,21 @@ public class модуль6дз extends Application {
 
         root.getChildren().addAll(generateCircles(countCircle));
 
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
+        primaryStage.setWidth(400);
+        primaryStage.setHeight(400);
 
+        Pane root1 = new Pane();
+
+        // построение первой линии
+        Star line = new Star(new Point(50, 150), new Point(250, 100));
+
+        line.show(root1).setStrokeWidth(10);
+
+        // отрисовка окна приложения
+        primaryStage.setScene(new Scene(root1));
         primaryStage.show();
     }
+
 
     public static void main(String[] args) {
 
