@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5c738bc-438c-4247-b62d-ee9074338118" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Panel.java" afterPath="$PROJECT_DIR$/src/Panel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Point.java" afterPath="$PROJECT_DIR$/src/Point.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Snowman.java" afterPath="$PROJECT_DIR$/src/Snowman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Star.java" afterPath="$PROJECT_DIR$/src/Star.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/модуль6дз.java" afterPath="$PROJECT_DIR$/src/модуль6дз.java" />
-    </list>
+    <list default="true" id="f5c738bc-438c-4247-b62d-ee9074338118" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,7 +15,7 @@
       <file leaf-file-name="модуль6дз.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/модуль6дз.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="527">
               <caret line="47" column="32" lean-forward="true" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
               <folding>
                 <element signature="e#0#3740#0" expanded="true" />
@@ -438,7 +431,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/модуль6дз.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="527">
           <caret line="47" column="32" lean-forward="true" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
           <folding>
             <element signature="e#0#3740#0" expanded="true" />
