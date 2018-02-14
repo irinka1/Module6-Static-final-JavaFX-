@@ -22,7 +22,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-public class Snowman_ extends Application {
+class Snowman_ extends Application {
 
 
     @Override
@@ -40,15 +40,7 @@ public class Snowman_ extends Application {
 
         primaryStage.setWidth(400);
         primaryStage.setHeight(400);
-
         Pane root1 = new Pane();
-
-        // construction of the first line
-        Star line = new Star(new Point(50, 150), new Point(250, 100));
-
-        line.show(root1).setStrokeWidth(10);
-
-        // rendering the application window
         primaryStage.setScene(new Scene(root1));
         primaryStage.show();
     }

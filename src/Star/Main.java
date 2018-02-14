@@ -1,12 +1,12 @@
 package Star;
 
-    import javafx.application.Application;
-    import javafx.stage.Stage;
-    import javafx.scene.Scene;
-    import javafx.scene.control.Button;
-    import javafx.scene.control.TextField;
-    import javafx.scene.layout.Pane;
-    import javafx.scene.text.Text;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 
 
 public class Main extends Application {
@@ -69,18 +69,18 @@ public class Main extends Application {
         primaryStage.setTitle("Звезда");
         primaryStage.show();
 
-        
+
         button.setOnMouseClicked(event -> {
-         
+
             int xCoordinate = Integer.parseInt(xCoordinateField.getText());
             int yCoordinate = Integer.parseInt(yCoordinateField.getText());
             int radius = Integer.parseInt(radiusField.getText());
             int countAngle = Integer.parseInt(angleField.getText());
             getStar = new Star(xCoordinate, yCoordinate, radius, countAngle);
-       
+
             root.getChildren().clear();
             root.getChildren().addAll(getStar.drawStar());
-     
+
             xCoordinateField.setText(String.valueOf(xCoordinate));
             yCoordinateField.setText(String.valueOf(yCoordinate));
             radiusField.setText(String.valueOf(radius));
